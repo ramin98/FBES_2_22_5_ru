@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Клиент</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      width: 100%;
+      max-width: 300px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: white;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CRUD Приложение с PostgreSQL</h1>
+
+  <!-- Форма для создания нового пользователя -->
+  <h2>Создать пользователя</h2>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Имя" required><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="password" name="password" placeholder="Пароль" required><br>
+    <button type="submit">Создать пользователя</button>
+  </form>
+
+  <form id="productForm">
+    <input type="text" id="product-name" placeholder="Имя" required><br>
+    <input type="text" id="price" placeholder="price" required><br>
+    <button type="submit">Создать пользователя</button>
+  </form>
+
+  <form id="productGet">
+    <input type="text" id="id-product-user" placeholder="user id" required><br>
+    <button type="submit">GET PRODUCTS</button>
+  </form>
+
+  <!-- Форма для обновления существующего пользователя -->
+  <h2>Обновить пользователя</h2>
+  <form id="updateForm">
+    <input type="number" id="updateId" placeholder="ID пользователя" required><br>
+    <input type="text" id="updateName" placeholder="Новое имя"><br>
+    <input type="email" id="updateEmail" placeholder="Новый email"><br>
+    <input type="password" id="updatePassword" placeholder="Новый пароль"><br>
+    <button type="submit">Обновить пользователя</button>
+  </form>
+
+  <!-- Список пользователей -->
+  <h2>Список пользователей</h2>
+  <ul id="userList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
